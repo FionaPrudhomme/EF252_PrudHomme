@@ -48,7 +48,7 @@ window.onload = function() {
           // tête de la flèche
           var arrowHead = L.polylineDecorator(arrow, {
             patterns: [
-                {offset: '100%', repeat: 0, symbol: L.Symbol.arrowHead({pixelSize: 8, polygon: false, pathOptions: {stroke: true, color: 'black', weight: 1.5}})}
+                {offset: '100%', repeat: 0, symbol: L.Symbol.arrowHead({pixelSize: 5, polygon: false, pathOptions: {stroke: true, color: 'black', weight: 1.5}})}
             ]
         });
         //ajout des points et flèches à la carte
@@ -86,7 +86,7 @@ window.onload = function() {
             // tête de la flèche
             var arrowHead = L.polylineDecorator(arrow, {
               patterns: [
-                  {offset: '100%', repeat: 0, symbol: L.Symbol.arrowHead({pixelSize: 15, polygon: false, pathOptions: {stroke: true, color: 'black', weight: 1.5}})}
+                  {offset: '100%', repeat: 0, symbol: L.Symbol.arrowHead({pixelSize: 5, polygon: false, pathOptions: {stroke: true, color: 'black', weight: 1.5}})}
               ]
           });
           //ajout des couches à la carte
