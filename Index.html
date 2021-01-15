@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Deplacement ITRF avec MapQuest</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+    <script src="https://unpkg.com/leaflet.markercluster@1.0.6/dist/leaflet.markercluster.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.6/dist/MarkerCluster.css"/>
+    <link type="text/css" rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.0.6/dist/MarkerCluster.Default.css"/>
+    <script src="http://www.mapquestapi.com/sdk/js/v7.2.s/mqa.toolkit.js?key=RnwerNMzLxgxpJNtawQYjBUx4tvBKEBe"></script>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <link rel="icon" type="image/png" href="earthicon.png">
+    <script src="LeafletPolylineDecorator-master/dist/leaflet.polylineDecorator.js"></script>
+</head>
+<body>
+
+  <h1 id="titre">Déplacement ITRF avec le client MapQuest</h1>
+  <h4>La carte ci-dessous est le fruit d'un projet de web mapping, fait à l'Ecole Nationale des Sciences Géographiques (ENSG).
+  Il représente des données fictives semblables à des données de déplacements.
+  Le but de ce projet étant de représenter des données de déplacements verticaux et horizontaux des stations ITRF.<br>
+  </h4>
+  <h2>Légende </h2>
+  <p>Les stations ITRF sont sous formes de cercles, le code couleur représente les déplacements verticaux, rouge étant les déplacements les plus descendants pour aller jusqu'au bleu les déplacements les plus ascendants.
+  Les déplacements horizontaux sous formes de segments issus du centre de leur cercle respectif.</p>
+
+  <div id="map"></div>
+  <script src="geo.js" ></script>
+
+</body>
+</html>

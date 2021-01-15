@@ -1,0 +1,38 @@
+#map {
+    height: 500px;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body{
+    background-color: white;
+}
+h1 {
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    background-color: #6F33FF;
+
+}
+h2 {
+  color: white;
+  font-family: monospace;
+  background-color: #6F33FF;
+
+}
+
+#title{
+}
+
+.legend {
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
