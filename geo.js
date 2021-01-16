@@ -7,16 +7,16 @@ window.onload = function() {
       layers: L.mapquest.tileLayer('map'),
       zoom: 2
     });
-    // create the sidebar instance and add it to the map
+    // creation de la bare latérale sur la carte
     var sidebar = L.control.sidebar({ container: 'sidebar' })
      .addTo(map);
-     // add panels dynamically to the sidebar
+     // ajout des deux panneaux sur la barre latérale
      sidebar
       .addPanel({
           id:   'info',
           tab:  '<i class="fa fa-bars"></i>',
-          title: 'Déplacement ITRF',
-          pane: '<p>La carte ci-dessous est un projet de web mapping, fait à l Ecole Nationale des Sciences Géographiques (ENSG). Il représente des données fictives semblables à des données de déplacements. Le but de ce projet étant de représenter des données de déplacements verticaux et horizontaux des stations ITRF.</p>',
+          title: 'Déplacements ITRF',
+          pane: '<p>La carte ci-dessous est un projet de web mapping, fait à l\'Ecole Nationale des Sciences Géographiques (ENSG). Il représente des données fictives semblables à des données de déplacements.<br> <br>Ce projet à pour finalité d\'être lié au projet d\'un autre étudiant afin que les données représentes les déplacements verticaux et horizontaux des stations ITRF. Le service qui sera mis en place par l\'autre étudiant renverra uniquement les données des 100 stations ayant les plus grands déplacements présents dans l\'emprise de la carte </p>',
       })
       .addPanel({
           id:   'legende',
@@ -47,19 +47,24 @@ window.onload = function() {
 
     //initialisation de la variable arrow
     var arrow;
-
+    //recupération des bornes de la carte
+    var bounds = map.getBounds();
     //requete POST ajax permettant de récupérer un fichier test sous format JSON
     var requestURL = 'donneesTests.json';
     var request = new XMLHttpRequest();
     request.open('POST', requestURL, true);
     request.responseType = 'json';
-    request.send();
+    //Envoi de la requete avec l'emprise de la carte, le service devra renvoyer uniquement les stations présentes dans cette emprise
+    request.send(bounds._northEast.lat,bounds._southWest.lat,bounds._southWest.lng,bounds._northEast.lng);
     //fonction exécutée lors du chargement de la page et du fichier
     request.onload = function() {
       //récupération de la réponse ajax sous forme d'objet json
       var liste = request.response;
       //tri de la liste grâce à la fonction sortByMVTZ ci-dessus
       liste.sort(sortByMVTZ);
+
+      bounds = map.getBounds();
+      console.log(bounds);
       //boucle parcourant la liste
       for(i=0;i<liste.length;i++){
           //création de cercles avec la lattitude et longitude du fichier (lat, lng) et assignation des couleurs selon la fonction de tri
@@ -91,6 +96,7 @@ window.onload = function() {
     var request = new XMLHttpRequest();
     request.open('POST', requestURL, true);
     request.responseType = 'json';
+    //Envoi de la requete avec l'emprise de la carte, le service devra renvoyer uniquement les stations présentes dans cette emprise
     request.send(bounds._northEast.lat,bounds._southWest.lat,bounds._southWest.lng,bounds._northEast.lng);
     //fonction exécutée lors du chargement de la page et du fichier
     request.onload = function() {

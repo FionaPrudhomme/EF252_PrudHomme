@@ -14,7 +14,7 @@ La carte devra représenter :
 - Les déplacements horizontaux sous forme de segments issus du centre du cercle
 - Les déplacements verticaux, d'une couleurs plus ou moins intense selon la valeur absolue du déplacement (rouge pour les points descendants et bleu pour les points ascendants).
 
-Les données seront disponibles sous la forme d’un web service qui renvoie les n déplacements les plus importants dans une boite englobante, selon le modèle des tremblements de terre vu lors de ce cours. Les données représentées sur ce projet seront des données fictives comme le service web fournissant les déplacements réels n'est pas disponible (projet d'un autre étudiant).
+Les données seront disponibles sous la forme d’un web service qui renvoie les n déplacements les plus importants dans une boite englobante, selon le modèle des tremblements de terre vu lors de ce cours. Les données représentées sur ce projet seront des données fictives comme le service web fournissant les déplacements réelles n'est pas disponible (projet d'un autre étudiant).
 
 ## Visualiser la carte
 
@@ -32,9 +32,9 @@ Les données seront disponibles sous la forme d’un web service qui renvoie les
 - Index.html
 - style.css
 - donneesTest.json
-- ReadMe.pdf
 - ReadMe.md
 - carnetDeBord.pdf
 - un dossier LeafletPolylineDecorator-master
-- documentationProgrammeur.pdf
+- un dossier leaflet-sidebar-V2
+- Documentation.pdf
   
