@@ -7,6 +7,27 @@ window.onload = function() {
       layers: L.mapquest.tileLayer('map'),
       zoom: 2
     });
+    // create the sidebar instance and add it to the map
+    var sidebar = L.control.sidebar({ container: 'sidebar' })
+     .addTo(map);
+     // add panels dynamically to the sidebar
+     sidebar
+      .addPanel({
+          id:   'info',
+          tab:  '<i class="fa fa-bars"></i>',
+          title: 'Déplacement ITRF',
+          pane: '<p>La carte ci-dessous est un projet de web mapping, fait à l Ecole Nationale des Sciences Géographiques (ENSG). Il représente des données fictives semblables à des données de déplacements. Le but de ce projet étant de représenter des données de déplacements verticaux et horizontaux des stations ITRF.</p>',
+      })
+      .addPanel({
+          id:   'legende',
+          tab:  '<i class="fa fa-gear"></i>',
+          title: 'Légende',
+          pane: '<p>Les stations ITRF sont sous formes de cercles.<br><br> les couleurs des cercles représentent les déplacements verticaux:<br> rouge étant les déplacements les plus descendants pour aller jusqu au bleu les déplacements les plus ascendants.<br><br>Les déplacements horizontaux sont sous formes de segments issus du centre de leur cercle respectif.</p>',
+      })
+
+
+
+
     //creation d'un groupe de couches
     var lay = L.featureGroup();
     //fonction pemettant le trie de la liste des déplacements verticaux selon leur vitesse, du plus petit au plus grand
@@ -131,6 +152,7 @@ window.onload = function() {
   };
   // ajout de la légende à la carte
   legend.addTo(map);
+
 
 
 }

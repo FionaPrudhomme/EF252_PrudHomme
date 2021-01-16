@@ -12,20 +12,16 @@
     <script src="http://www.mapquestapi.com/sdk/js/v7.2.s/mqa.toolkit.js?key=RnwerNMzLxgxpJNtawQYjBUx4tvBKEBe"></script>
     <link type="text/css" rel="stylesheet" href="style.css"/>
     <link rel="icon" type="image/png" href="earthicon.png">
-    <script src="LeafletPolylineDecorator-master/dist/leaflet.polylineDecorator.js"></script>
+    <link rel="stylesheet" href="leaflet-sidebar-v2/css/leaflet-sidebar.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+
 </head>
 <body>
 
-  <h1 id="titre">Déplacement ITRF avec le client MapQuest</h1>
-  <h4>La carte ci-dessous est le fruit d'un projet de web mapping, fait à l'Ecole Nationale des Sciences Géographiques (ENSG).
-  Il représente des données fictives semblables à des données de déplacements.
-  Le but de ce projet étant de représenter des données de déplacements verticaux et horizontaux des stations ITRF.<br>
-  </h4>
-  <h2>Légende </h2>
-  <p>Les stations ITRF sont sous formes de cercles, le code couleur représente les déplacements verticaux, rouge étant les déplacements les plus descendants pour aller jusqu'au bleu les déplacements les plus ascendants.
-  Les déplacements horizontaux sont sous formes de segments issus du centre de leur cercle respectif.</p>
-
   <div id="map"></div>
+  <script src="LeafletPolylineDecorator-master/dist/leaflet.polylineDecorator.js"></script>
+  <script type="text/javascript" src="leaflet-sidebar-v2/js/leaflet-sidebar.js"></script>
   <script src="geo.js" ></script>
 
 </body>

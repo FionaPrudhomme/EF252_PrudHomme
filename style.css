@@ -1,29 +1,18 @@
-#map {
-    height: 500px;
-    width: auto;
-    margin-right: auto;
-    margin-left: auto;
+body {
+    padding: 0;
+    margin: 0;
 }
 
-body{
-    background-color: white;
+html, body, #map {
+    height: 100%;
+    font: 10pt "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
-h1 {
-    text-align: center;
-    color: white;
-    font-family: monospace;
-    background-color: #6F33FF;
-
-}
-h2 {
-  color: white;
-  font-family: monospace;
-  background-color: #6F33FF;
-
+.lorem {
+    font-style: italic;
+    text-align: justify;
+    color: #AAA;
 }
 
-#title{
-}
 
 .legend {
     line-height: 18px;
